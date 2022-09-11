@@ -1,17 +1,31 @@
+import 'dart:async';
+
+import 'package:dice/dice.dart';
 import 'package:flutter/material.dart';
 
-class splash extends StatefulWidget {
-  const splash({super.key});
+class Splash extends StatefulWidget {
+  const Splash({super.key});
 
   @override
-  State<splash> createState() => _splashState();
+  State<Splash> createState() => _SplashState();
 }
 
-class _splashState extends State<splash> {
+class _SplashState extends State<Splash> {
   @override
+  void initState() {
+    super.initState();
+    Timer(
+        const Duration(milliseconds: 1500),
+        () => Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => const Dice())));
+  }
+
   Widget build(BuildContext context) {
     return const Center(
-      child: Text('Welcome'),
+      child: Text(
+        'Welcome',
+        style: TextStyle(fontSize: 30),
+      ),
     );
   }
 }
