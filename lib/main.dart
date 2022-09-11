@@ -1,4 +1,3 @@
-import 'package:dice/dice.dart';
 import 'package:dice/splash.dart';
 import 'package:flutter/material.dart';
 
@@ -21,7 +20,7 @@ class MyApp extends StatelessWidget {
           title: const Text("Dice"),
           centerTitle: true,
         ),
-        body: Splash(),
+        body: const Splash(),
       ),
     );
   }

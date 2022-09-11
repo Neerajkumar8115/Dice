@@ -15,16 +15,19 @@ class _SplashState extends State<Splash> {
   void initState() {
     super.initState();
     Timer(
-        const Duration(milliseconds: 1500),
+        const Duration(milliseconds: 200),
         () => Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => const Dice())));
   }
 
   Widget build(BuildContext context) {
     return const Center(
-      child: Text(
-        'Welcome',
-        style: TextStyle(fontSize: 30),
+      child: Hero(
+        tag: Dice,
+        child: Text(
+          'Welcome',
+          style: TextStyle(fontSize: 30),
+        ),
       ),
     );
   }
