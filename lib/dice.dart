@@ -12,6 +12,15 @@ class _DiceState extends State<Dice> {
   var number = 1;
   var leftDiceNumber = 1;
   var color = 1;
+
+  void changeDice() {
+    setState(() {
+      leftDiceNumber = Random().nextInt(6) + 1;
+      color = Random().nextInt(2) + 1;
+      number = Random().nextInt(9);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Hero(
@@ -24,11 +33,7 @@ class _DiceState extends State<Dice> {
               Expanded(
                 child: TextButton(
                   onPressed: () {
-                    setState(() {
-                      leftDiceNumber = Random().nextInt(6) + 1;
-                      color = Random().nextInt(2) + 1;
-                      number = Random().nextInt(9);
-                    });
+                    changeDice();
                   },
                   child: Image.asset('images/Dice$leftDiceNumber.png'),
                 ),
@@ -36,11 +41,7 @@ class _DiceState extends State<Dice> {
               Expanded(
                 child: TextButton(
                   onPressed: () {
-                    setState(() {
-                      leftDiceNumber = Random().nextInt(6) + 1;
-                      color = Random().nextInt(2) + 1;
-                      number = Random().nextInt(9);
-                    });
+                    changeDice();
                   },
                   child: Container(
                     height: 60,
@@ -60,11 +61,7 @@ class _DiceState extends State<Dice> {
                   // onHover: Colors.white,
 
                   onPressed: () {
-                    setState(() {
-                      leftDiceNumber = Random().nextInt(6) + 1;
-                      color = Random().nextInt(2) + 1;
-                      number = Random().nextInt(9);
-                    });
+                    changeDice();
                   },
                   child: Container(
                     color: Colors.white,
