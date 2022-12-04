@@ -15,7 +15,7 @@ class _SplashState extends State<Splash> {
   void initState() {
     super.initState();
     Timer(
-        const Duration(milliseconds: 200),
+        const Duration(milliseconds: 1000),
         () => Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => const Dice())));
   }
@@ -25,7 +25,7 @@ class _SplashState extends State<Splash> {
       child: Hero(
         tag: Dice,
         child: Text(
-          'Welcome',
+          'Welcome ',
           style: TextStyle(fontSize: 30),
         ),
       ),
